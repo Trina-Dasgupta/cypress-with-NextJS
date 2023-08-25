@@ -17,10 +17,7 @@ describe('Various examples', () => {
     })
     it('intercepts', () => {
         cy.intercept("POST", 'http://localhost:3000/examples', {
-            // body:{
-            //     message:'Successfylly intercepted request'
-            // }
-             fixture: 'example.json'
+            fixture: 'example.json'
         })
         cy.getDataTest('post-button').click()
     })
